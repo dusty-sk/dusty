@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url("nature-landscape-with-vegetation-flora.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    background-color: #2e2e2e;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+    border-image: url("3yqhlxn.png");
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    margin-bottom: 1rem;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.yt-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.yt-button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+main {
+    padding: 2rem;
+
+    margin: auto;
+}
+
+.about, .videos {
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+iframe:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2e2e2e;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Animácie */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.live-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+#subs, #views {
+    white-space: nowrap;
+}
+.good-video-1, .good-video-2, .good-video-3 {
+    flex: 1;
+    min-width: 250px;
+    height: 315px;
+    border: 1px solid #333;
+}
+
+
+.video-grid {
+    background-color: #2a2e4b; /* modré pozadie podobné zelenému */
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center; /* zarovnanie iframe do stredu */
+    max-width: 900px;
+    margin: 0 auto 2rem; /* centrovanie sekcie a spodný margin */
+}
+
+
+.video-grid iframe {
+    flex: 1 1 300px;
+    aspect-ratio: 16 / 9;
+    border: 2px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+    max-width: 100%;
+}
+
+.video-wrapper {
+    flex: 1 1 45%;
+    min-width: 280px;
+    max-width: 560px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 2px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*good video sekcia */
+.good-video-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+
+}
+
+
+
+
+/* zelene videa (pravo) */
+
+
+
+
+.good-video-row-green {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start; /* video vpravo, ale obsah od začiatku kontajnera */
+    background: #2a2e4b;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    gap: 20px;
+    align-items: center;
+
+    width: fit-content; /* šírka podľa obsahu */
+    margin-left: auto;  /* posunie blok doprava */
+}
+
+
+
+
+.good-video-row-green:nth-child(1) {
+    background: #2a2e4b;
+    flex-direction: row-reverse;
+}
+.good-video-row-green:nth-child(2) {
+    background: #1e3d2f;
+    flex-direction: row-reverse;
+}
+.good-video-row-green:nth-child(3) {
+    background: #4b2d2e;
+    flex-direction: row-reverse;
+}
+
+.good-video-row-green iframe {
+    flex: 1 1 560px;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+/* good videa red (vlavo) */
+.good-video-row-red {
+    max-width: 1300px;
+    width: 100%; /* alebo môžeš skúsiť aj width: fit-content, ak chceš podľa obsahu */
+    margin-left: 0;  /* zarovnanie naľavo */
+    margin-right: auto; /* prípadne môžeš dať, aby to nerastlo doprava */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+
+
+.good-video-row-red:nth-child(1) {
+    background: #2a2e4b;
+    flex-direction: row;
+}
+.good-video-row-red:nth-child(2) {
+    background: #1e3d2f;
+    flex-direction: row-reverse;
+}
+.good-video-row-red:nth-child(3) {
+    background: #4b2d2e;
+    flex-direction: row;
+}
+
+.good-video-row-red iframe {
+    flex: 1 1 560px;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+/* video info */
+.video-info {
+    flex: 1 1 300px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* best & newest video (middle) */
+.good-video-row-newest, .good-video-row-best {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 1rem auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.good-video-row-newest {
+    background-color: #264d73; /* tmavomodrá */
+    flex-direction: row;
+}
+
+.good-video-row-best {
+    background-color: #1a3a59; /* trochu tmavšia modrá */
+    flex-direction: row-reverse;
+}
+
+.good-video-row-newest iframe,
+.good-video-row-best iframe {
+    flex: 1 1 560px;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.video-info {
+    flex: 1 1 300px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about-container {
+    position: relative;
+
+    overflow: hidden;     /* zabráni prekrytiu iných častí */
+    margin-bottom: 40px;  /* oddelenie od ostatných elementov */
+}
+
+
+.about {
+    margin-top: 30px;
+    background: #1a3a59;
+    width: 1300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    transform: translateY(-50%);
+    animation: slideX 32s linear infinite alternate;
+}
+
+@keyframes slideX {
+    from {
+        left: 0;
+    }
+    to {
+        left: calc(100% - 1300px);
+    }
+}
