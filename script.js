@@ -17,8 +17,4 @@ window.addEventListener('load', revealOnScroll);
 
 
 
-  if (/Mobi|Android/i.test(navigator.userAgent)) {
-    document.getElementById('desktop-warning').style.display = 'block';
-  }
-
 
