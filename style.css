@@ -60,13 +60,25 @@ h1 {
     transform: scale(1.05);
 }
 
-main {
+.main {
     padding: 2rem;
-
     margin: auto;
 }
 
-.about, .videos {
+.about {
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    background-color: rgba(26, 58, 89, 0.9);
+    width: 1300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    max-width: 900px;
+}
+
+.videos {
     margin-bottom: 3rem;
     opacity: 0;
     transform: translateY(40px);
@@ -77,8 +89,6 @@ main {
     opacity: 1;
     transform: translateY(0);
 }
-
-
 
 iframe {
     width: 100%;
@@ -113,7 +123,6 @@ footer {
     }
 }
 
-
 .live-numbers {
     display: flex;
     justify-content: center;
@@ -127,28 +136,42 @@ footer {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 
-#subs, #views {
+#subs {
     white-space: nowrap;
 }
-.good-video-1, .good-video-2, .good-video-3 {
+
+#views {
+    white-space: nowrap;
+}
+
+.good-video-1 {
     flex: 1;
     min-width: 250px;
     height: 315px;
-    border: 1px solid #333;
 }
 
+.good-video-2 {
+    flex: 1;
+    min-width: 250px;
+    height: 315px;
+}
+
+.good-video-3 {
+    flex: 1;
+    min-width: 250px;
+    height: 315px;
+}
 
 .video-grid {
-    background-color: #2a2e4b; /* modré pozadie podobné zelenému */
+    background-color: #2a2e4b;
     padding: 1.5rem 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     display: flex;
-    justify-content: center; /* zarovnanie iframe do stredu */
+    justify-content: center;
     max-width: 900px;
-    margin: 0 auto 2rem; /* centrovanie sekcie a spodný margin */
+    margin: 0 auto 2rem;
 }
-
 
 .video-grid iframe {
     flex: 1 1 300px;
@@ -173,122 +196,91 @@ footer {
     transition: transform 0.3s;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*good video sekcia */
 .good-video-section {
     display: flex;
     flex-direction: column;
     gap: 40px;
     width: 100%;
-
 }
 
-
-
-
-/* zelene videa (pravo) */
-
-
-
-
+/* zelené videá */
 .good-video-row-green {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-start; /* video vpravo, ale obsah od začiatku kontajnera */
+    justify-content: flex-start;
     background: #2a2e4b;
-    padding: 1rem 2rem;
-    border-radius: 20px;
-    gap: 20px;
+    padding: 0.5rem 1rem; /* zmenšené */
+    border-radius: 15px; /* mierne zmenšené */
+    gap: 15px; /* menší gap */
     align-items: center;
-
-    width: fit-content; /* šírka podľa obsahu */
-    margin-left: auto;  /* posunie blok doprava */
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 50px;
+    max-width: 900px; /* limit šírky */
 }
-
-
-
 
 .good-video-row-green:nth-child(1) {
     background: #2a2e4b;
     flex-direction: row-reverse;
 }
+
 .good-video-row-green:nth-child(2) {
     background: #1e3d2f;
     flex-direction: row-reverse;
 }
+
 .good-video-row-green:nth-child(3) {
     background: #4b2d2e;
     flex-direction: row-reverse;
 }
 
 .good-video-row-green iframe {
-    flex: 1 1 560px;
-    max-width: 560px;
+    flex: 1 1 280px; /* zmenšené */
+    max-width: 280px; /* zmenšené */
     aspect-ratio: 16 / 9;
     border: none;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-
-/* good videa red (vlavo) */
+/* červené videá */
 .good-video-row-red {
-    max-width: 1300px;
-    width: 100%; /* alebo môžeš skúsiť aj width: fit-content, ak chceš podľa obsahu */
-    margin-left: 0;  /* zarovnanie naľavo */
-    margin-right: auto; /* prípadne môžeš dať, aby to nerastlo doprava */
+    max-width: 900px; /* zmenšené */
+    width: 100%;
+    margin-left: min(50px);
+    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    gap: 15px; /* zmenšený gap */
+    padding: 1rem; /* zmenšené */
+    border-radius: 15px; /* mierne zmenšené */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* zmenšené tiene */
     box-sizing: border-box;
 }
-
-
 
 .good-video-row-red:nth-child(1) {
     background: #2a2e4b;
     flex-direction: row;
 }
+
 .good-video-row-red:nth-child(2) {
     background: #1e3d2f;
     flex-direction: row-reverse;
 }
+
 .good-video-row-red:nth-child(3) {
     background: #4b2d2e;
     flex-direction: row;
 }
 
 .good-video-row-red iframe {
-    flex: 1 1 560px;
-    max-width: 560px;
+    flex: 1 1 280px; /* zmenšené */
+    max-width: 280px; /* zmenšené */
     aspect-ratio: 16 / 9;
     border: none;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
+
 /* video info */
 .video-info {
     flex: 1 1 300px;
@@ -297,9 +289,8 @@ footer {
     line-height: 1.6;
 }
 
-
-/* best & newest video (middle) */
-.good-video-row-newest, .good-video-row-best {
+/* best & newest video */
+.good-video-row-newest {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -308,58 +299,199 @@ footer {
     width: fit-content;
     margin: 1rem auto;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.good-video-row-newest {
-    background-color: #264d73; /* tmavomodrá */
+    background-color: #264d73;
     flex-direction: row;
 }
 
 .good-video-row-best {
-    background-color: #1a3a59; /* trochu tmavšia modrá */
-    flex-direction: row-reverse;
-}
-
-.good-video-row-newest iframe,
-.good-video-row-best iframe {
-    flex: 1 1 560px;
-    max-width: 560px;
-    aspect-ratio: 16 / 9;
-    border: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-.video-info {
-    flex: 1 1 300px;
-    color: white;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.about-container {
-    position: relative;
-
-    overflow: hidden;     /* zabráni prekrytiu iných častí */
-    margin-bottom: 40px;  /* oddelenie od ostatných elementov */
-}
-
-
-.about {
-    margin-top: 30px;
-    background: #1a3a59;
-    width: 1300px;
-    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 1rem auto;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    position: relative;
-    transform: translateY(-50%);
-    animation: slideX 32s linear infinite alternate;
+    background-color: #1a3759;
+    flex-direction: row;
 }
 
-@keyframes slideX {
-    from {
-        left: 0;
+.good-video-row-best iframe,
+.good-video-row-newest iframe {
+    flex: 1 1 350px;
+    max-width: 350px;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+}
+
+/* Footer and other text */
+footer p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobil/tv */
+
+/* Už máš reset, základ body aj header pekne */
+
+
+/* Základné štýly (už máš) */
+
+/* Responzívne úpravy pre mobily */
+@media (max-width: 768px) {
+    .about, .video-grid, .good-video-row-green, .good-video-row-red {
+        width: 90%;       /* šírka prispôsobená menšej obrazovke */
+        max-width: 100%;  /* aby neprekročili obrazovku */
+        margin: 1rem auto; /* stredové zarovnanie a menšie okraje */
+        padding: 1rem;    /* menšie vnútorné odsadenie */
     }
-    to {
-        left: calc(100% - 1300px);
+
+    .good-video-row-green, .good-video-row-red {
+        flex-direction: column !important; /* zmeníme riadky na stĺpce */
+        align-items: center;
+        gap: 1rem; /* medzery medzi položkami */
+    }
+
+    .good-video-row-green iframe,
+    .good-video-row-red iframe,
+    .good-video-row-best iframe,
+    .good-video-row-newest iframe {
+        max-width: 100%;   /* videá zaberú celú šírku */
+        height: auto;      /* výška podľa šírky (pomer 16:9) */
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .main {
+        padding: 1rem;
+    }
+
+    .yt-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
+
