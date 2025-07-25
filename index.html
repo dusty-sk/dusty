@@ -4,14 +4,15 @@
 
 
 
-    
+
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dusty_sk - YouTube Bloxd</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
-        <script>
+    <script>
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         if (isMobile) {
             const link = document.createElement('link');
@@ -21,9 +22,13 @@
         }
     </script>
 
-    
 </head>
 <body>
+
+
+
+
+
 <header>
     <img src="cfc2d388-cec3-436e-8209-a49a325eaca8.png" alt="Profilovka Dusty_sk" class="logo" />
     <div class="about-container">
@@ -48,6 +53,9 @@
         </a>
     </div>
 </header>
+
+
+
 
 <section class="main">
     <section class="videos" id="newest">
@@ -127,20 +135,42 @@
     </section>
 </section>
 
+
+
+
+<section class="texture-packs-section reveal">
+    <div class="texture-pack-full">
+        <div class="texture-pack-gallery">
+            <div class="screenshot" style="background-image: url('screenshots/loading-screen.jpg');"></div>
+            <div class="screenshot" style="background-image: url('screenshots/skybox+pig.jpg');"></div>
+            <div class="screenshot" style="background-image: url('screenshots/create-world-menu.png');"></div>
+            <div class="screenshot" style="background-image: url('screenshots/banned-72hrs-menu.png');"></div>
+            <div class="screenshot" style="background-image: url('screenshots/menu-golden-blue.jpg');"></div>
+            <div class="screenshot" style="background-image: url('screenshots/inventory+blocks.jpg');"></div>
+        </div>
+        <div class="texture-pack-text">
+            <h2 style="color: goldenrod">golden</h2> <h2 style="color: #007bff">blue</h2>
+            <h3>work in progress</h3>
+            <p>This texture pack was inpired by 2 other pack, textures by JamBloxds - (JanuaryBoy) and css by Relonix White - (BloxdMan).</p>
+            <a href="texture-packs/golden-blue.zip" download class="download-button">Download non-finnished version</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
 <footer>
     <p>&copy; 2025 Dusty_sk | Web by Dusty</p>
 </footer>
 
- <div id="desktop-warning" style="display:none; position: fixed; top: 0; left: 0; width: 100%; background: #ff4444; color: white; padding: 1rem; text-align: center; font-weight: bold; z-index: 9999;">
-    Please click the three dots in the top right corner and select <strong>"Request Desktop Site"</strong>.
-    <button onclick="document.getElementById('desktop-warning').style.display='none'" style="margin-left:1rem; background: white; color: #ff4444; border: none; padding: 0.3rem 0.6rem; cursor: pointer;">Close</button>
-</div>
 
-<script>
-    // Ak je používateľ na mobile (detekcia podľa user agent)
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        document.getElementById('desktop-warning').style.display = 'block';
-    }
-</script>
+
+
 </body>
 </html>
