@@ -142,3 +142,14 @@ footer {
 footer p {
   margin: 0;
 }
+
+.video-info {
+    flex: 1 1 auto !important;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 0.5rem;
+    width: 100%;
+    word-break: break-word;
+}
+
