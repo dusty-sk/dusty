@@ -50,3 +50,35 @@ document.addEventListener('DOMContentLoaded', () => {
         lightbox.style.backgroundImage = '';
     });
 });
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(
+        ".about, .videos, .good-video-row-green, .good-video-row-red, .texture-pack-full"
+    );
+
+    const animateOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.9;
+
+        items.forEach((item, index) => {
+            const boxTop = item.getBoundingClientRect().top;
+            if (boxTop < triggerBottom && !item.classList.contains("animated")) {
+                const classes = ["animate-fade", "animate-left", "animate-right", "animate-zoom"];
+                const chosenClass = classes[index % classes.length];
+                item.classList.add(chosenClass, "animated");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", animateOnScroll);
+    animateOnScroll();
+});
+
+item.classList.add("animate-left", "animated");
+
