@@ -11,6 +11,7 @@ body {
   color: white;
   line-height: 1.4;
   padding: 0.5rem;
+  overflow-x: hidden;
 }
 
 header {
@@ -36,6 +37,7 @@ header {
 h1 {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
+  word-wrap: break-word;
 }
 
 .yt-button {
@@ -95,7 +97,7 @@ iframe {
   text-align: center;
 }
 
-/* Videá všetkých typov - prispôsobené mobilom */
+/* Videá všetkých typov */
 .video-grid,
 .good-video-section,
 .good-video-row-green,
@@ -111,6 +113,8 @@ iframe {
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.4);
   margin-bottom: 1.5rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .video-info {
@@ -118,6 +122,8 @@ iframe {
   line-height: 1.5;
   text-align: center;
   padding: 0 0.5rem;
+  width: 100%;
+  word-break: break-word;
 }
 
 .video-wrapper {
