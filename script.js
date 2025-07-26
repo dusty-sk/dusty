@@ -82,3 +82,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 item.classList.add("animate-left", "animated");
 
+
+
+
+
+
+
+
+
+
+
+
+
+function copyCode(id) {
+    const code = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(code).then(() => {
+        const msg = document.getElementById("copied-msg" + id.replace("code-block", ""));
+        msg.style.display = "inline";
+        setTimeout(() => (msg.style.display = "none"), 2000);
+    });
+}
+
